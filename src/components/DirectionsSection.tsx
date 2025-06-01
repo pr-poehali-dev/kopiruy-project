@@ -39,31 +39,44 @@ const DirectionsSection: React.FC = () => {
   ];
 
   return (
-    <div className="text-white">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold mb-8 text-yellow-400 font-roboto">
-          Направления
-        </h2>
+    <div className="text-white animate-fade-in">
+      <div className="text-center mb-12">
+        <div className="backdrop-blur-lg bg-gradient-to-r from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 mb-12 shadow-2xl">
+          <h2 className="text-6xl font-bold mb-8 text-transparent bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text font-roboto drop-shadow-lg">
+            Направления
+          </h2>
 
-        <div className="flex justify-center space-x-8 mb-8 text-lg font-roboto">
-          <div className="text-center">
-            <p className="text-white">Тюмень - Петропавловск (ежедневно)</p>
-          </div>
-          <div className="text-center">
-            <p className="text-white">Петропавловск - Тюмень (ежедневно)</p>
+          <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-12 text-xl font-roboto">
+            <div className="backdrop-blur-sm bg-white/10 border border-yellow-400/30 rounded-xl p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <p className="text-yellow-300 font-medium">
+                🚌 Тюмень - Петропавловск
+              </p>
+              <p className="text-white/80 text-sm mt-1">(ежедневно)</p>
+            </div>
+            <div className="backdrop-blur-sm bg-white/10 border border-yellow-400/30 rounded-xl p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <p className="text-yellow-300 font-medium">
+                🚌 Петропавловск - Тюмень
+              </p>
+              <p className="text-white/80 text-sm mt-1">(ежедневно)</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {trips.map((trip, index) => (
-          <TripCard
+          <div
             key={index}
-            time={trip.time}
-            route={trip.route}
-            location={trip.location}
-            schedule={trip.schedule}
-          />
+            className="animate-fade-in"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <TripCard
+              time={trip.time}
+              route={trip.route}
+              location={trip.location}
+              schedule={trip.schedule}
+            />
+          </div>
         ))}
       </div>
     </div>
