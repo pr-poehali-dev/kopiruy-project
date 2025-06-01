@@ -1,11 +1,15 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from "react";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import DirectionsSection from "@/components/DirectionsSection";
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-yellow-400">
+      <div className="container mx-auto px-6 py-8">
+        <Navigation />
+        <HeroSection />
+        <DirectionsSection />
       </div>
     </div>
   );
