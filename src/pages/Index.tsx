@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import DirectionsSection from "@/components/DirectionsSection";
+import ServicesSection from "@/components/ServicesSection";
 
 const Index: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Index: React.FC = () => {
         <Navigation />
         <HeroSection />
         <DirectionsSection />
+        <ServicesSection />
       </div>
     </div>
   );
