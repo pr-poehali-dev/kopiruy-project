@@ -9,7 +9,7 @@ const Index: React.FC = () => {
       className="min-h-screen bg-cover bg-center bg-no-repeat relative"
       style={{
         backgroundImage:
-          "url(https://cdn.poehali.dev/files/0a1afa8b-a0d8-4272-a230-db010042fc5a.png)",
+          "url(https://cdn.poehali.dev/files/43329680-9143-4b95-a1d1-0e92cb3523db.png)",
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
